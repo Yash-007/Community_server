@@ -21,6 +21,10 @@ app.use('/v1/role', roleRouter);
 
 DBconnection();
 
+app.get('/', function (req, res) {
+  res.send('Hello from the server!')
+})
+
 
 app.listen(process.env.PORT || 4000, () => {
     console.log('server started');
